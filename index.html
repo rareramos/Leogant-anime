@@ -160,6 +160,39 @@
             top: 2vw;
         }
 
+        @media (max-width: 768px) and (orientation: portrait) {
+          #app {
+            transform: scale(1.5);
+          }
+
+          .hint {
+            margin-top: -55vw;
+            margin-left: -30vw;
+            width: 80vw;
+            font-size: 2.5vw;
+          }
+
+          .cartridge-hint .circle {
+            left: 31vw;
+            top: 46vw;
+          }
+
+          .silicone-hose-hint .circle {
+            left: 11vw;
+            top: 70vw;
+          }
+
+          .ball-hint .circle {
+            left: 42.7vw;
+            top: 59.5vw;
+          }
+
+          .spout-hint .circle {
+            left: 42.5vw;
+            top: 46vw;
+          }
+        }
+
         @keyframes pulse-ring {
             0% {
                 -webkit-transform: scale(.33);
