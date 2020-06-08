@@ -18,7 +18,7 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            font-family: Roboto, sans-serif;
+            font-family: aktiv-grotesk, sans-serif;
             background: #ebebeb;
         }
 
@@ -33,6 +33,11 @@
             margin-top: -23.5vw;
         }
 
+        .base.layer-2 {
+          z-index: 3;
+          margin-top: 9.2vw;
+        }
+
         .block {
             position: absolute;
             top: 50%;
@@ -42,78 +47,107 @@
         .ball {
             width: 7.5vw;
             margin-left: 10.5vw;
-            margin-top: -0.3vw;
-            z-index: 10;
+            margin-top: -0.8vw;
+            z-index: 2;
         }
 
         .filter {
             width: 17.3vw;
             margin-left: -5.6vw;
-            margin-top: -27vw;
+            margin-top: -27.3vw;
+            z-index: 3;
         }
 
         .faucet {
             width: 24vw;
             margin-left: 9.3vw;
-            margin-top: -30.5vw;
+            margin-top: -31vw;
+            z-index: 4;
+        }
+
+        .circle, .circle .ripple {
+            background-image: linear-gradient(90deg, #00BFFF, #1E90FF);
         }
 
         .circle {
-            position: absolute;
             width: 3vw;
             height: 3vw;
-            -webkit-transition: all .3s linear;
-            transition: all .3s linear;
-            -webkit-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+            position: absolute;
+            border-radius: 100px;
+            z-index: 4;
         }
 
-        @media screen and (min-width: 640px) {
-            .circle::before {
-                content: '';
-                position: relative;
-                display: inline-block;
-                width: 500%;
-                height: 500%;
-                box-sizing: border-box;
-                margin-left: -200%;
-                margin-top: -200%;
-                border-radius: 100%;
-                background-color: #01a4e9;
-                pointer-events: none;
-                -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-                -o-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-                animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        .circle .ripple {
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            z-index: -1;
+            opacity: 0;
+            margin: -5.9vw 0 0 -5.9vw;
+            border-radius: 100%;
+            -webkit-animation: ripple 1.8s infinite;
+            animation: ripple 1.9s infinite
+        }
+
+        @-webkit-keyframes ripple {
+            0% {
+                opacity: 1;
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1)
             }
         }
 
-        .circle::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: #01a4e9;
-            border-radius: 100%;
-            box-shadow: 0 0 8px rgba(0,0,0,.3);
-            -webkit-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-            -o-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-            animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+        @keyframes ripple {
+            0% {
+                opacity: 1;
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        .circle .ripple:nth-child(2) {
+            animation-delay: .3s;
+            -webkit-animation-delay: .3s
+        }
+
+        .circle .ripple:nth-child(3) {
+            animation-delay: .6s;
+            -webkit-animation-delay: .6s
+        }
+
+        .circle .ripple:nth-child(4) {
+            animation-delay: .6s;
+            -webkit-animation-delay: .6s
         }
 
         .hint {
             position: absolute;
             top: 50%;
             left: 50%;
+            z-index: 15;
+            color: #363636;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 1.6em;
+            letter-spacing: 0.06em;
         }
 
-        .cartridge-hint > .description,
-        .silicone-hose-hint > .description,
-        .ball-hint > .description,
-        .spout-hint > .description {
+        .cartridge-hint .description,
+        .silicone-hose-hint .description,
+        .ball-hint .description,
+        .spout-hint .description {
             width: 80%;
         }
 
@@ -271,70 +305,107 @@
 <body>
     <div id="app">
         <img class="block base" src="images/main.jpg">
+        <img class="block base layer-2" src="images/main-layer-2.jpg">
         <img class="block filter" src="images/filter-top.png" />
         <img class="block ball" src="images/gold-ball.png" />
         <img class="block faucet" src="images/faucet.png" />
 
         <div class="hint cartridge-hint">
-            <div class="circle"></div>
-            <h4>Bakteriensichere Aktivkohle Patrone</h4>
-            <div class="description">
-                Entfernt effektiv Schwermetalle,
-                Mikroplastik, pathogene Keime,
-                Bakterien, Kupfer, Blei, Chlor,
-                Lindan, DDT, Atrazin, Pestizide,
-                Medikamentenrückstände,
-                Gerüche und Rostpartikel
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <strong>Bakteriensichere Aktivkohle Patrone</strong>
+                <div class="description">
+                  Entfernt effektiv Schwermetalle,
+                  Mikroplastik, pathogene Keime,
+                  Bakterien, Kupfer, Blei, Chlor,
+                  Lindan, DDT, Atrazin, Pestizide,
+                  Medikamentenrückstände,
+                  Gerüche und Rostpartikel
+                </div>
             </div>
         </div>
         <div class="hint silicone-hose-hint">
-            <div class="circle"></div>
-            <h4>Silikonschlauch</h4>
-            <div class="description">
-                Angenehm weicher Schlauch aus
-                hochwertigen Silikon mit Edelstahl
-                Knickschutz und 360° Drehgelenk
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <strong>Silikonschlauch</strong>
+                <div class="description">
+                  Angenehm weicher Schlauch aus
+                  hochwertigen Silikon mit Edelstahl
+                  Knickschutz und 360° Drehgelenk
+                </div>
             </div>
         </div>
         <div class="hint ball-hint">
-            <div class="circle"></div>
-            <h4>Vitalisierung 24kt. vergoldet</h4>
-            <div class="description">
-                Verwirbeln und Strukturieren
-                des Wassers für weichen und
-                frischen Geschmack
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <strong>Vitalisierung 24kt. vergoldet</strong>
+                <div class="description">
+                  Verwirbeln und Strukturieren
+                  des Wassers für weichen und
+                  frischen Geschmack
+                </div>
             </div>
         </div>
         <div class="hint spout-hint">
-            <div class="circle"></div>
-            <h4>Hochwertiger Edelstahl Auslauf</h4>
-            <div class="description">
-                Anschluss und Auslauf
-                aus gebürstetem Edlestahl für
-                Langlebigkeit sund Hygiene
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <strong>Hochwertiger Edelstahl Auslauf</strong>
+                <div class="description">
+                  Anschluss und Auslauf
+                  aus gebürstetem Edlestahl für
+                  Langlebigkeit sund Hygiene
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        function isPortrait() {
+            return window.innerHeight > window.innerWidth;
+        }
+
         const tween = new TimelineLite();
-        const startElementPosition = "-150vw";
+        const startElementPosition = isPortrait() ? "-110vw" : "-80vw";
 
         tween
-            .from(".hint.cartridge-hint", 1, { autoAlpha: 0 })
+            .from(".cartridge-hint .circle", 2, { autoAlpha: 0 })
+            .from(".cartridge-hint .content", 2, { autoAlpha: 0 })
             .to(".hint.cartridge-hint", 1, { autoAlpha: 0 }, "+=2")
             .from(".filter", 6, { "margin-top": startElementPosition })
-            .from(".hint.silicone-hose-hint", 1, { autoAlpha: 0 })
+            .from(".silicone-hose-hint .circle", 2, { autoAlpha: 0 })
+            .from(".silicone-hose-hint .content", 2, { autoAlpha: 0 })
             .to(".hint.silicone-hose-hint", 1, { autoAlpha: 0 }, "+=2")
-            .from(".ball", 12, { "margin-top": startElementPosition })
-            .set(".ball", { attr: { src:"images/gold-ball-cutted.png" } }, "-=1.9")
-            .from(".hint.ball-hint", 1, { autoAlpha: 0 })
+            .from(".ball", 6, { "margin-top": startElementPosition })
+            .set(".ball", { attr: { src:"images/gold-ball-cutted.png" } })
+            .from(".ball-hint .circle", 2, { autoAlpha: 0 })
+            .from(".ball-hint .content", 2, { autoAlpha: 0 })
             .to(".hint.ball-hint", 1, { autoAlpha: 0 }, "+=2")
-            .fromTo(".ball", 4, { "z-index": "0" }, { "z-index": "10" })
+            .fromTo(".ball", 4, { "z-index": "2" }, { "z-index": "10" })
             .from(".faucet", 3, { "margin-top": startElementPosition })
-            .set(".faucet", { attr: { src:"images/faucet-cutted.png" } }, "-=0.4")
-            .to(".ball", 0, { "z-index": "0" }, "+=0.3")
-            .from(".hint.spout-hint", 1, { autoAlpha: 0 })
+            .set(".faucet", { attr: { src:"images/faucet-cutted.png" } }, "-=0.3")
+            .to(".faucet", 0, { "z-index": "10" }, "+=0.3")
+            .from(".spout-hint .circle", 2, { autoAlpha: 0 })
+            .from(".spout-hint .content", 2, { autoAlpha: 0 })
             .to(".hint.spout-hint", 1, { autoAlpha: 0 }, "+=2");
 
         const controller = new ScrollMagic.Controller();
