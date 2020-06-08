@@ -326,13 +326,13 @@
             .from(".filter", 6, { "margin-top": startElementPosition })
             .from(".hint.silicone-hose-hint", 1, { autoAlpha: 0 })
             .to(".hint.silicone-hose-hint", 1, { autoAlpha: 0 }, "+=2")
-            .from(".ball", 6, { "margin-top": startElementPosition })
-            .set(".ball", { attr: { src:"images/gold-ball-cutted.png" } }, "-=0.6")
+            .from(".ball", 12, { "margin-top": startElementPosition })
+            .set(".ball", { attr: { src:"images/gold-ball-cutted.png" } }, "-=1.9")
             .from(".hint.ball-hint", 1, { autoAlpha: 0 })
             .to(".hint.ball-hint", 1, { autoAlpha: 0 }, "+=2")
             .fromTo(".ball", 4, { "z-index": "0" }, { "z-index": "10" })
-            .from(".faucet", 6, { "margin-top": startElementPosition })
-            .set(".faucet", { attr: { src:"images/faucet-cutted.png" } }, "-=0.3")
+            .from(".faucet", 3, { "margin-top": startElementPosition })
+            .set(".faucet", { attr: { src:"images/faucet-cutted.png" } }, "-=0.4")
             .to(".ball", 0, { "z-index": "0" }, "+=0.3")
             .from(".hint.spout-hint", 1, { autoAlpha: 0 })
             .to(".hint.spout-hint", 1, { autoAlpha: 0 }, "+=2");
@@ -342,7 +342,7 @@
         const scene = new ScrollMagic.Scene({
             triggerElement: '#app',
             triggerHook: 0,
-            duration: 20000,
+            duration: 7000,
         })
             .setTween(tween)
             .setPin('#app')
