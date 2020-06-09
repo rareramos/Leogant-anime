@@ -138,7 +138,8 @@ body {
 
 .hint .title {
   font-family: "Vesper Pro Bold", sans-serif;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
+  margin-bottom: 0.2vw;
 }
 
 .cartridge-hint .description,
@@ -156,7 +157,7 @@ body {
 
 .cartridge-hint .circle {
   left: -10.4vw;
-  top: 4vw;
+  top: 2vw;
 }
 
 .silicone-hose-hint {
@@ -171,22 +172,23 @@ body {
 
 .ball-hint {
   width: 38vw;
-  margin-top: 4vw;
+  margin-top: 3vw;
   margin-left: 22vw;
 }
 
 .ball-hint .circle {
   left: -9.3vw;
+  top: 1vw;
 }
 
 .spout-hint {
   width: 33vw;
   margin-top: -11vw;
-  margin-left: 21vw;
+  margin-left: 22.2vw;
 }
 
 .spout-hint .circle {
-  left: -8.3vw;
+  left: -9.5vw;
   top: 1vw;
 }
 
@@ -210,31 +212,36 @@ h2 {
   }
 
   h2 {
-    margin-top: 31vw;
+    margin-top: -49vw;
     margin-left: -23vw;
     font-size: 4.5vw;
   }
 
   .hint {
-    margin-top: -55vw;
+    margin-top: 30vw;
     margin-left: -30vw;
     width: 80vw;
     font-size: 2.5vw;
   }
 
+  .hint .title {
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
+
   .cartridge-hint .circle {
     left: 31vw;
-    top: 46vw;
+    top: -36vw;
   }
 
   .silicone-hose-hint .circle {
-    left: 11vw;
-    top: 70vw;
+    left: 16vw;
+    top: -13vw;
   }
 
   .ball-hint .circle {
     left: 42.7vw;
-    top: 59.5vw;
+    top: -26vw;
   }
 
   .spout-hint {
@@ -243,7 +250,7 @@ h2 {
 
   .spout-hint .circle {
     left: 42.5vw;
-    top: 46vw;
+    top: -39vw;
   }
 }
 
