@@ -44,7 +44,7 @@ body {
 .filter {
   width: 17.3vw;
   margin-left: -5.6vw;
-  margin-top: -27.3vw;
+  margin-top: -27.1vw;
   z-index: 3;
 }
 
@@ -219,7 +219,7 @@ h2 {
 
   .hint {
     margin-top: 30vw;
-    margin-left: -30vw;
+    margin-left: -29vw;
     width: 80vw;
     font-size: 2.5vw;
   }
@@ -230,17 +230,21 @@ h2 {
   }
 
   .cartridge-hint .circle {
-    left: 31vw;
+    left: 30.5vw;
     top: -36vw;
   }
 
   .silicone-hose-hint .circle {
-    left: 16vw;
+    left: 15vw;
     top: -13vw;
   }
 
+  .ball-hint {
+    width: 78vw;
+  }
+
   .ball-hint .circle {
-    left: 42.7vw;
+    left: 41.7vw;
     top: -26vw;
   }
 
@@ -249,7 +253,7 @@ h2 {
   }
 
   .spout-hint .circle {
-    left: 42.5vw;
+    left: 41.5vw;
     top: -39vw;
   }
 }
