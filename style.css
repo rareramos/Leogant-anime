@@ -213,7 +213,7 @@ h2 {
 
   h2 {
     margin-top: -49vw;
-    margin-left: -23vw;
+    margin-left: -28.5vw;
     font-size: 4.5vw;
   }
 
@@ -240,7 +240,7 @@ h2 {
   }
 
   .ball-hint {
-    width: 78vw;
+    width: 74vw;
   }
 
   .ball-hint .circle {
@@ -249,7 +249,7 @@ h2 {
   }
 
   .spout-hint {
-    width: 78vw;
+    width: 74vw;
   }
 
   .spout-hint .circle {
