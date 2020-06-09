@@ -25,7 +25,19 @@ tween
   .to(".faucet", 0, { "z-index": "11" }, "+=0.3")
   .from(".spout-hint .circle", 2, { autoAlpha: 0 })
   .from(".spout-hint .content", 1, { autoAlpha: 0 })
-  .to(".hint.spout-hint", 1, { autoAlpha: 0 }, "+=2");
+  .to(".hint.spout-hint", 1, { autoAlpha: 0 }, "+=2")
+  .to(".base", 2, { autoAlpha: 0 })
+  .to(".filter", 2, { autoAlpha: 0 }, "-=1")
+  .to(".ball", 2, { autoAlpha: 0 }, "-=2")
+  .to(".faucet", 2, { autoAlpha: 0 }, "-=2")
+  .from(".colored-version-5", 4, { autoAlpha: 0 }, "+=2")
+  .to(".colored-version-5", 4, { autoAlpha: 0 }, "+=6")
+  .from(".colored-version-6", 4, { autoAlpha: 0 })
+  .to(".colored-version-6", 4, { autoAlpha: 0 }, "+=6")
+  .from(".colored-version-7", 4, { autoAlpha: 0 })
+  .to(".colored-version-7", 4, { autoAlpha: 0 }, "+=6")
+  .from(".colored-version-8", 4, { autoAlpha: 0 });
+
 
 const controller = new ScrollMagic.Controller();
 

@@ -353,3 +353,14 @@ h2 {
     filter: hue-rotate(-360deg);
   }
 }
+
+.colored-version-5,
+.colored-version-6,
+.colored-version-7,
+.colored-version-8 {
+  width: 63vw;
+  margin-left: -30vw;
+  margin-top: -29.5vw;
+  z-index: 14;
+  /*opacity: 0;*/
+}
