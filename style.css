@@ -156,7 +156,7 @@ body {
 }
 
 .cartridge-hint .circle {
-  left: -10.1vw;
+  left: -10.25vw;
   top: 2vw;
 }
 
@@ -177,7 +177,7 @@ body {
 }
 
 .ball-hint .circle {
-  left: -9vw;
+  left: -9.1vw;
   top: 1vw;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .spout-hint .circle {
-  left: -9.2vw;
+  left: -9.3vw;
   top: 1vw;
 }
 
@@ -253,7 +253,7 @@ h2 {
   }
 
   .spout-hint .circle {
-    left: 41.8vw;
+    left: 42vw;
     top: -39vw;
   }
 }
