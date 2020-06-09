@@ -131,13 +131,14 @@ body {
   z-index: 15;
   color: #363636;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1vw;
   line-height: 1.6em;
   letter-spacing: 0.06em;
 }
 
 .hint .title {
   font-family: "Vesper Pro Bold", sans-serif;
+  font-size: 1.2vw;
 }
 
 .cartridge-hint .description,
@@ -148,7 +149,7 @@ body {
 }
 
 .cartridge-hint {
-  width: 50vw;
+  width: 45vw;
   margin-top: -10vw;
   margin-left: 12vw;
 }
@@ -159,12 +160,12 @@ body {
 }
 
 .silicone-hose-hint {
-  width: 34vw;
-  margin-left: -34vw;
+  width: 37vw;
+  margin-left: -36vw;
 }
 
 .silicone-hose-hint .circle {
-  left: 20vw;
+  left: 22vw;
   top: 17vw;
 }
 
@@ -179,7 +180,7 @@ body {
 }
 
 .spout-hint {
-  width: 35vw;
+  width: 33vw;
   margin-top: -11vw;
   margin-left: 21vw;
 }

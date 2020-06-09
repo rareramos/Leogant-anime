@@ -4,7 +4,7 @@ function isPortrait() {
 }
 
 const tween = new TimelineLite();
-const startElementPosition = isPortrait() ? "-125vw" : "-85vw";
+const startElementPosition = isPortrait() ? "-130vw" : "-90vw";
 
 tween
   .from(".cartridge-hint .circle", 2, { autoAlpha: 0 })
