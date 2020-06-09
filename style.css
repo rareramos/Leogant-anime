@@ -35,9 +35,9 @@ body {
 }
 
 .ball {
-  width: 7.5vw;
-  margin-left: 10.5vw;
-  margin-top: -0.8vw;
+  width: 7.7vw;
+  margin-left: 10.45vw;
+  margin-top: -1.1vw;
   z-index: 2;
 }
 
@@ -50,9 +50,10 @@ body {
 
 .faucet {
   width: 24vw;
-  margin-left: 9.3vw;
-  margin-top: -31vw;
+  margin-left: 9.7vw;
+  margin-top: -28.1vw;
   z-index: 4;
+  transform: rotate(1.8deg);
 }
 
 .circle, .circle .ripple {
@@ -183,12 +184,12 @@ body {
 
 .spout-hint {
   width: 33vw;
-  margin-top: -11vw;
+  margin-top: -8vw;
   margin-left: 22.2vw;
 }
 
 .spout-hint .circle {
-  left: -9.3vw;
+  left: -9.1vw;
   top: 1vw;
 }
 
@@ -358,9 +359,9 @@ h2 {
 .colored-version-6,
 .colored-version-7,
 .colored-version-8 {
-  width: 63vw;
-  margin-left: -30vw;
-  margin-top: -29.5vw;
+  width: 61.2vw;
+  margin-left: -29.15vw;
+  margin-top: -27.9vw;
   z-index: 14;
   /*opacity: 0;*/
 }

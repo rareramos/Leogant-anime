@@ -30,7 +30,7 @@ tween
   .to(".filter", 2, { autoAlpha: 0 }, "-=1")
   .to(".ball", 2, { autoAlpha: 0 }, "-=2")
   .to(".faucet", 2, { autoAlpha: 0 }, "-=2")
-  .from(".colored-version-5", 4, { autoAlpha: 0 }, "+=4")
+  .from(".colored-version-5", 2, { autoAlpha: 0 }, "-=2")
   .from(".colored-version-6", 0, { autoAlpha: 0 }, "+=4")
   .from(".colored-version-7", 0, { autoAlpha: 0 }, "+=4")
   .from(".colored-version-8", 0, { autoAlpha: 0 }, "+=4")
