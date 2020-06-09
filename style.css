@@ -62,8 +62,8 @@ body {
 }
 
 .circle {
-  width: 3vw;
-  height: 3vw;
+  width: 2.7vw;
+  height: 2.7vw;
   position: absolute;
   border-radius: 100px;
   z-index: 4;
@@ -75,7 +75,7 @@ body {
   height: 15vw;
   z-index: -1;
   opacity: 0;
-  margin: -5.9vw 0 0 -5.9vw;
+  margin: -6.2vw 0 0 -6.2vw;
   border-radius: 100%;
   -webkit-animation: ripple 1.8s infinite;
   animation: ripple 1.9s infinite
@@ -156,7 +156,7 @@ body {
 }
 
 .cartridge-hint .circle {
-  left: -10.4vw;
+  left: -10.1vw;
   top: 2vw;
 }
 
@@ -166,7 +166,7 @@ body {
 }
 
 .silicone-hose-hint .circle {
-  left: 22vw;
+  left: 21.7vw;
   top: 17vw;
 }
 
@@ -177,7 +177,7 @@ body {
 }
 
 .ball-hint .circle {
-  left: -9.3vw;
+  left: -9vw;
   top: 1vw;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .spout-hint .circle {
-  left: -9.5vw;
+  left: -9.2vw;
   top: 1vw;
 }
 
@@ -220,7 +220,7 @@ h2 {
   .hint {
     margin-top: 30vw;
     margin-left: -29vw;
-    width: 80vw;
+    width: 78vw;
     font-size: 2.5vw;
   }
 
@@ -230,12 +230,12 @@ h2 {
   }
 
   .cartridge-hint .circle {
-    left: 30.5vw;
+    left: 30.8vw;
     top: -36vw;
   }
 
   .silicone-hose-hint .circle {
-    left: 15vw;
+    left: 15.3vw;
     top: -13vw;
   }
 
@@ -244,7 +244,7 @@ h2 {
   }
 
   .ball-hint .circle {
-    left: 41.7vw;
+    left: 42vw;
     top: -26vw;
   }
 
@@ -253,7 +253,7 @@ h2 {
   }
 
   .spout-hint .circle {
-    left: 41.5vw;
+    left: 41.8vw;
     top: -39vw;
   }
 }
