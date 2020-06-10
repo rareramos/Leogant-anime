@@ -30,10 +30,10 @@ tween
   .to(".filter", 2, { autoAlpha: 0 }, "-=1")
   .to(".ball", 2, { autoAlpha: 0 }, "-=2")
   .to(".faucet", 2, { autoAlpha: 0 }, "-=2")
-  .from(".colored-version-5", 2, { autoAlpha: 0 }, "-=2")
-  .from(".colored-version-6", 0, { autoAlpha: 0 }, "+=4")
-  .from(".colored-version-7", 0, { autoAlpha: 0 }, "+=4")
-  .from(".colored-version-8", 0, { autoAlpha: 0 }, "+=4")
+  .to(".colored-version-5", 2, { autoAlpha: 1 }, "-=2")
+  .to(".colored-version-6", 0, { autoAlpha: 1 }, "+=4")
+  .to(".colored-version-7", 0, { autoAlpha: 1 }, "+=4")
+  .to(".colored-version-8", 0, { autoAlpha: 1 }, "+=4")
   .to(".colored-version-5", 1, { autoAlpha: 0 });
 
 
