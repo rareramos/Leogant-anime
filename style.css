@@ -35,10 +35,11 @@ body {
 }
 
 .ball {
-  width: 7.7vw;
-  margin-left: 10.45vw;
-  margin-top: -1.1vw;
+  width: 8vw;
+  margin-left: 10.3vw;
+  margin-top: -1.15vw;
   z-index: 2;
+  transform: rotate(1deg);
 }
 
 .filter {
@@ -50,8 +51,8 @@ body {
 
 .faucet {
   width: 24vw;
-  margin-left: 9.7vw;
-  margin-top: -28.1vw;
+  margin-left: 9.85vw;
+  margin-top: -28.2vw;
   z-index: 4;
   transform: rotate(1.8deg);
 }
