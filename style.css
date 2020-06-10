@@ -132,14 +132,14 @@ body {
   z-index: 15;
   color: #363636;
   font-weight: 300;
-  font-size: 1vw;
+  font-size: 16px;
   line-height: 1.6em;
   letter-spacing: 0.06em;
 }
 
 .hint .title {
   font-family: "Vesper Pro Bold", sans-serif;
-  font-size: 1.3vw;
+  font-size: 25px;
   margin-bottom: 0.2vw;
 }
 
@@ -151,14 +151,14 @@ body {
 }
 
 .cartridge-hint {
-  width: 45vw;
+  width: 47vw;
   margin-top: -10vw;
   margin-left: 12vw;
 }
 
 .cartridge-hint .circle {
   left: -10.25vw;
-  top: 2vw;
+  top: 1.5vw;
 }
 
 .silicone-hose-hint {
@@ -172,7 +172,7 @@ body {
 }
 
 .ball-hint {
-  width: 38vw;
+  width: 41vw;
   margin-top: 3vw;
   margin-left: 22vw;
 }
@@ -183,7 +183,7 @@ body {
 }
 
 .spout-hint {
-  width: 33vw;
+  width: 37vw;
   margin-top: -8vw;
   margin-left: 22.2vw;
 }
@@ -205,6 +205,24 @@ h2 {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
   z-index: 15;
+}
+
+@media (min-width: 1400px) {
+  .silicone-hose-hint {
+    width: 25vw;
+  }
+
+  .cartridge-hint {
+    width: 39vw;
+  }
+
+  .ball-hint {
+    width: 31vw;
+  }
+
+  .spout-hint {
+    width: 27vw;
+  }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -254,7 +272,7 @@ h2 {
   }
 
   .spout-hint .circle {
-    left: 42.3vw;
+    left: 42.1vw;
     top: -37vw;
   }
 }
