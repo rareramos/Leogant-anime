@@ -284,6 +284,43 @@ body {
   }
 }
 
+@media (max-width: 320px) and (orientation: portrait) {
+  #app h2 {
+    margin-left: -50vw;
+    margin-top: -61vw;
+    transform: scale(0.54);
+  }
+}
+
+
+@media (width: 768px) and (height: 1024px) and (orientation: portrait) {
+  #app h2 {
+    margin-left: -28vw;
+    margin-top: -42vw;
+    transform: none;
+  }
+
+  .hint {
+    margin-top: 24vw;
+  }
+
+  .cartridge-hint .circle {
+    top: -30vw;
+  }
+
+  .silicone-hose-hint .circle {
+    top: -7vw;
+  }
+
+  .ball-hint .circle {
+    top: -20vw;
+  }
+
+  .spout-hint .circle {
+    top: -31vw;
+  }
+}
+
 @keyframes pulse-ring {
   0% {
     -webkit-transform: scale(.33);
