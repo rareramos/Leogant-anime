@@ -1,7 +1,12 @@
 
 @font-face {
-  font-family: "Vesper Pro Bold";
+  font-family: "Vesper-Bold";
   src: url(fonts/Vesper-Pro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "aktiv-grotesk";
+  src: url(fonts/AktivGroteskCorp-Regular.ttf);
 }
 
 body {
@@ -132,16 +137,19 @@ body {
   left: 50%;
   z-index: 15;
   color: #363636;
+  font-family: aktiv-grotesk;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 0.9vw;
   line-height: 1.6em;
   letter-spacing: 0.06em;
 }
 
 .hint .title {
-  font-family: "Vesper Pro Bold", sans-serif;
-  font-size: 25px;
+  font-family: "Vesper-Bold", sans-serif;
+  font-size: 1.3vw;
   margin-bottom: 0.2vw;
+  line-height: 1.1em;
+  letter-spacing: -.01em;
 }
 
 .cartridge-hint .description,
@@ -173,32 +181,33 @@ body {
 }
 
 .ball-hint {
-  width: 41vw;
-  margin-top: 3vw;
+  width: 28vw;
+  margin-top: 2vw;
   margin-left: 22vw;
 }
 
 .ball-hint .circle {
-  left: -9.1vw;
-  top: 1vw;
+  left: -9vw;
+  top: 2vw;
 }
 
 .spout-hint {
-  width: 37vw;
+  width: 30vw;
   margin-top: -8vw;
   margin-left: 22.2vw;
 }
 
 .spout-hint .circle {
-  left: -9.1vw;
-  top: 1vw;
+  left: -9.0vw;
+  top: 0.7vw;
 }
 
-h2 {
+#app h2 {
   margin-top: -28vw;
-  margin-left: -39vw;
-  font-family: "Vesper Pro Bold";
-  font-size: 3.5vw;
+  margin-left: -46vw;
+  font-family: "Vesper-Bold";
+  font-style: normal;
+  font-size: 4.6vw;
   line-height: 1.1em;
   letter-spacing: 0;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -206,23 +215,14 @@ h2 {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
   z-index: 15;
+  text-transform: none;
 }
 
-@media (min-width: 1400px) {
-  .silicone-hose-hint {
-    width: 25vw;
-  }
 
-  .cartridge-hint {
-    width: 39vw;
-  }
-
-  .ball-hint {
-    width: 31vw;
-  }
-
-  .spout-hint {
-    width: 27vw;
+@media only screen and (max-width: 768px) {
+  #app h2 {
+    font-size: 36px;
+    margin-left: -53vw;
   }
 }
 
@@ -231,10 +231,10 @@ h2 {
     transform: scale(1.5);
   }
 
-  h2 {
-    margin-top: -49vw;
-    margin-left: -28.5vw;
-    font-size: 4.5vw;
+  #app h2 {
+    margin-left: -42vw;
+    margin-top: -56vw;
+    transform: scale(0.67);
   }
 
   .hint {
@@ -247,6 +247,12 @@ h2 {
   .hint .title {
     font-size: 3vw;
     margin-bottom: 1.5vw;
+    letter-spacing: .0384px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    white-space: pre-wrap;
   }
 
   .cartridge-hint .circle {
