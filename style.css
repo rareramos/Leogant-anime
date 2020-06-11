@@ -19,6 +19,10 @@ body {
 
 #app {
   height: 100%;
+}
+
+.image {
+  height: 100%;
   transform: scale(0.8);
 }
 
@@ -139,75 +143,69 @@ body {
   color: #363636;
   font-family: aktiv-grotesk;
   font-weight: 300;
-  font-size: 0.9vw;
+  font-size: 18px;
   line-height: 1.6em;
   letter-spacing: 0.06em;
 }
 
 .hint .title {
   font-family: "Vesper-Bold", sans-serif;
-  font-size: 1.3vw;
+  font-size: 25px;
   margin-bottom: 0.2vw;
   line-height: 1.1em;
   letter-spacing: -.01em;
 }
 
-.cartridge-hint .description,
-.silicone-hose-hint .description,
-.ball-hint .description,
-.spout-hint .description {
-  width: 80%;
-}
-
 .cartridge-hint {
-  width: 47vw;
-  margin-top: -10vw;
+  width: 500px;
+  margin-top: -9vw;
   margin-left: 12vw;
 }
 
 .cartridge-hint .circle {
-  left: -10.25vw;
-  top: 1.5vw;
+  left: -10.9vw;
+  top: 50px;
 }
 
 .silicone-hose-hint {
-  width: 29vw;
-  margin-left: -36vw;
+  width: 475px;
+  margin-left: -37vw;
+  margin-top: -3vw;
 }
 
 .silicone-hose-hint .circle {
-  left: 21.7vw;
+  left: 25.7vw;
   top: 17vw;
 }
 
 .ball-hint {
-  width: 28vw;
-  margin-top: 2vw;
-  margin-left: 22vw;
+  width: 450px;
+  margin-top: 1.5vw;
+  margin-left: 19.2vw;
 }
 
 .ball-hint .circle {
   left: -9vw;
-  top: 2vw;
+  top: 1.5vw;
 }
 
 .spout-hint {
-  width: 28vw;
+  width: 370px;
   margin-top: -8vw;
-  margin-left: 22.2vw;
+  margin-left: 19.4vw;
 }
 
 .spout-hint .circle {
   left: -9.0vw;
-  top: 0.7vw;
+  top: 1.5vw;
 }
 
 #app h2 {
-  margin-top: -28vw;
-  margin-left: -46vw;
+  margin-top: -26vw;
+  margin-left: -48vw;
   font-family: "Vesper-Bold";
   font-style: normal;
-  font-size: 4.6vw;
+  font-size: 70px;
   line-height: 1.1em;
   letter-spacing: 0;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -221,31 +219,42 @@ body {
 
 @media only screen and (max-width: 768px) {
   #app h2 {
+    width: 500px;
     font-size: 36px;
     margin-left: -53vw;
+  }
+
+  .hint {
+    font-size: 16px;
+  }
+
+  .hint .title {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
   #app {
+    margin-top: 10vw !important;
+  }
+
+  #app .image {
+    margin-top: -10vw;
     transform: scale(1.5);
   }
 
   #app h2 {
     margin-left: -42vw;
-    margin-top: -56vw;
-    transform: scale(0.67);
+    margin-top: -84vw;
   }
 
   .hint {
-    margin-top: 30vw;
-    margin-left: -29vw;
-    width: 78vw;
-    font-size: 2.5vw;
+    margin-top: 35vw;
+    margin-left: -45vw;
+    width: calc(100% - 30px);
   }
 
   .hint .title {
-    font-size: 3vw;
     margin-bottom: 1.5vw;
     letter-spacing: .0384px;
     -webkit-hyphens: auto;
@@ -253,6 +262,10 @@ body {
     -ms-hyphens: auto;
     hyphens: auto;
     white-space: pre-wrap;
+  }
+
+  .cartridge-hint {
+    margin-top: 28vw;
   }
 
   .cartridge-hint .circle {
@@ -265,17 +278,9 @@ body {
     top: -13vw;
   }
 
-  .ball-hint {
-    width: 74vw;
-  }
-
   .ball-hint .circle {
     left: 42vw;
     top: -26vw;
-  }
-
-  .spout-hint {
-    width: 74vw;
   }
 
   .spout-hint .circle {
@@ -283,15 +288,6 @@ body {
     top: -37vw;
   }
 }
-
-@media (max-width: 320px) and (orientation: portrait) {
-  #app h2 {
-    margin-left: -50vw;
-    margin-top: -61vw;
-    transform: scale(0.54);
-  }
-}
-
 
 @media (width: 768px) and (height: 1024px) and (orientation: portrait) {
   #app h2 {
@@ -331,6 +327,22 @@ body {
   }
   80%, 100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+  #app {
+    margin-top: auto !important;
+  }
+
+  #app h2 {
+    margin-left: -49vw;
+  }
+
+  .hint {
+    margin-top: 30vw;
+    margin-left: -49vw;
+    width: 100%;
   }
 }
 
