@@ -40,8 +40,8 @@ tween
 const controller = new ScrollMagic.Controller();
 
 const scene = new ScrollMagic.Scene({
-  triggerElement: '#app',
-  triggerHook: 0,
+  triggerElement: '#image',
+  triggerHook: 0.5,
   duration: 7000,
 })
   .setTween(tween)

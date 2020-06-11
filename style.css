@@ -22,6 +22,7 @@ body {
 }
 
 .image {
+  margin-top: 5vw;
   height: 100%;
   transform: scale(0.8);
 }
@@ -158,7 +159,7 @@ body {
 
 .cartridge-hint {
   width: 500px;
-  margin-top: -9vw;
+  margin-top: -4vw;
   margin-left: 12vw;
 }
 
@@ -170,7 +171,7 @@ body {
 .silicone-hose-hint {
   width: 475px;
   margin-left: -37vw;
-  margin-top: -3vw;
+  margin-top: 2vw;
 }
 
 .silicone-hose-hint .circle {
@@ -180,7 +181,7 @@ body {
 
 .ball-hint {
   width: 450px;
-  margin-top: 1.5vw;
+  margin-top: 6.5vw;
   margin-left: 19.2vw;
 }
 
@@ -191,7 +192,7 @@ body {
 
 .spout-hint {
   width: 370px;
-  margin-top: -8vw;
+  margin-top: -3vw;
   margin-left: 19.4vw;
 }
 
@@ -201,7 +202,7 @@ body {
 }
 
 #app h2 {
-  margin-top: -26vw;
+  margin-top: -21vw;
   margin-left: -48vw;
   font-family: "Vesper-Bold";
   font-style: normal;
@@ -235,7 +236,7 @@ body {
 
 @media (max-width: 768px) and (orientation: portrait) {
   #app {
-    margin-top: 10vw !important;
+    margin-top: 5vw !important;
   }
 
   #app .image {
