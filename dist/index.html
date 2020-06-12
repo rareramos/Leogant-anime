@@ -12,308 +12,94 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/CSSRulePlugin.min.js"></script>
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            font-family: Roboto, sans-serif;
-            background: #ebebeb;
-        }
 
-        #app {
-            height: 100%;
-            transform: scale(0.8);
-        }
-
-        .base {
-            width: 46vw;
-            margin-left: -29.5vw;
-            margin-top: -23.5vw;
-        }
-
-        .block {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-        }
-        
-        .ball {
-            width: 7.5vw;
-            margin-left: 10.5vw;
-            margin-top: -0.3vw;
-            z-index: 10;
-        }
-
-        .filter {
-            width: 17.3vw;
-            margin-left: -5.6vw;
-            margin-top: -27vw;
-        }
-
-        .faucet {
-            width: 24vw;
-            margin-left: 9.3vw;
-            margin-top: -30.5vw;
-        }
-
-        .circle {
-            position: absolute;
-            width: 3vw;
-            height: 3vw;
-            -webkit-transition: all .3s linear;
-            transition: all .3s linear;
-            -webkit-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-        }
-
-        @media screen and (min-width: 640px) {
-            .circle::before {
-                content: '';
-                position: relative;
-                display: inline-block;
-                width: 500%;
-                height: 500%;
-                box-sizing: border-box;
-                margin-left: -200%;
-                margin-top: -200%;
-                border-radius: 100%;
-                background-color: #01a4e9;
-                pointer-events: none;
-                -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-                -o-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-                animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-            }
-        }
-
-        .circle::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: #01a4e9;
-            border-radius: 100%;
-            box-shadow: 0 0 8px rgba(0,0,0,.3);
-            -webkit-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-            -o-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-            animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-        }
-
-        .hint {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-        }
-
-        .cartridge-hint > .description,
-        .silicone-hose-hint > .description,
-        .ball-hint > .description,
-        .spout-hint > .description {
-            width: 80%;
-        }
-
-        .cartridge-hint {
-            width: 50vw;
-            margin-top: -10vw;
-            margin-left: 12vw;
-        }
-
-        .cartridge-hint .circle {
-            left: -10vw;
-            top: 6vw;
-        }
-
-        .silicone-hose-hint {
-            width: 50vw;
-            margin-left: -47vw;
-        }
-
-        .silicone-hose-hint .circle {
-            left: 27vw;
-            top: 14vw;
-        }
-
-        .ball-hint {
-            width: 38vw;
-            margin-top: 4vw;
-            margin-left: 22vw;
-        }
-
-        .ball-hint .circle {
-            left: -9vw;
-            top: 1vw;
-        }
-
-        .spout-hint {
-            width: 35vw;
-            margin-top: -11vw;
-            margin-left: 21vw;
-        }
-
-        .spout-hint .circle {
-            left: -8vw;
-            top: 2vw;
-        }
-
-        @keyframes pulse-ring {
-            0% {
-                -webkit-transform: scale(.33);
-                -moz-transform: scale(.33);
-                -ms-transform: scale(.33);
-                -o-transform: scale(.33);
-                transform: scale(.33);
-            }
-            80%, 100% {
-                opacity: 0;
-            }
-        }
-
-        @-webkit-keyframes pulse-ring {
-            0% {
-                -webkit-transform: scale(.33);
-                -moz-transform: scale(.33);
-                -ms-transform: scale(.33);
-                -o-transform: scale(.33);
-                transform: scale(.33);
-            }
-            80%, 100% {
-                opacity: 0;
-            }
-        }
-
-        @keyframes pulse-dot {
-            0% {
-                -webkit-transform: scale(.8);
-                -moz-transform: scale(.8);
-                -ms-transform: scale(.8);
-                -o-transform: scale(.8);
-                transform: scale(.8);
-            }
-            50% {
-                -webkit-transform: scale(1);
-                -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                -o-transform: scale(1);
-                transform: scale(1);
-            }
-            100% {
-                -webkit-transform: scale(.8);
-                -moz-transform: scale(.8);
-                -ms-transform: scale(.8);
-                -o-transform: scale(.8);
-                transform: scale(.8);
-            }
-        }
-
-        @-webkit-keyframes pulse-dot {
-            0% {
-                -webkit-transform: scale(.8);
-                -moz-transform: scale(.8);
-                -ms-transform: scale(.8);
-                -o-transform: scale(.8);
-                transform: scale(.8);
-            }
-            50% {
-                -webkit-transform: scale(1);
-                -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                -o-transform: scale(1);
-                transform: scale(1);
-            }
-            100% {
-                -webkit-transform: scale(.8);
-                -moz-transform: scale(.8);
-                -ms-transform: scale(.8);
-                -o-transform: scale(.8);
-                transform: scale(.8);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
     <div id="app">
+        <h2 class="block">
+            “Ein Auftischfilter,<br>
+            bei dem an alles<br>
+            gedacht wurde.”
+        </h2>
         <img class="block base" src="images/main.jpg">
+        <img class="block base layer-2" src="images/main-layer-2.jpg">
         <img class="block filter" src="images/filter-top.png" />
-        <img class="block ball" src="images/gold-ball.png" />
+        <img class="block ball" src="images/gold-ball.png?v=1" />
         <img class="block faucet" src="images/faucet.png" />
 
         <div class="hint cartridge-hint">
-            <div class="circle"></div>
-            <h4>Bakteriensichere Aktivkohle Patrone</h4>
-            <div class="description">
-                Entfernt effektiv Schwermetalle,
-                Mikroplastik, pathogene Keime,
-                Bakterien, Kupfer, Blei, Chlor,
-                Lindan, DDT, Atrazin, Pestizide,
-                Medikamentenrückstände,
-                Gerüche und Rostpartikel
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <div class="title">Bakteriensichere Aktivkohle Patrone</div>
+                <div class="description">
+                    Entfernt effektiv Schwermetalle, Mikroplastik,
+                    pathogene Keime, Bakterien, Kupfer, Blei,
+                    Chlor, Medikamentenrückstände, Lindan,
+                    Pestizide, DDT, Atrazin, Gerüche und
+                    Rostpartikel
+                </div>
             </div>
         </div>
         <div class="hint silicone-hose-hint">
-            <div class="circle"></div>
-            <h4>Silikonschlauch</h4>
-            <div class="description">
-                Angenehm weicher Schlauch aus
-                hochwertigen Silikon mit Edelstahl
-                Knickschutz und 360° Drehgelenk
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <div class="title">Silikonschlauch</div>
+                <div class="description">
+                    Hochwertiger Silikon Gewebeschlauch
+                    mit Edelstahl Knickschutz und 360°
+                    Drehgelenk
+                </div>
             </div>
         </div>
         <div class="hint ball-hint">
-            <div class="circle"></div>
-            <h4>Vitalisierung 24kt. vergoldet</h4>
-            <div class="description">
-                Verwirbeln und Strukturieren
-                des Wassers für weichen und
-                frischen Geschmack
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <div class="title">Vitalisierung 24kt. vergoldet</div>
+                <div class="description">
+                    Verwirbeln und Strukturieren aktiviert
+                    das Wassers und sorgt für einen weichen und
+                    frischen Geschmack
+                </div>
             </div>
         </div>
         <div class="hint spout-hint">
-            <div class="circle"></div>
-            <h4>Hochwertiger Edelstahl Auslauf</h4>
-            <div class="description">
-                Anschluss und Auslauf
-                aus gebürstetem Edlestahl für
-                Langlebigkeit sund Hygiene
+            <div class="circle">
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+                <span class="ripple blueBg"></span>
+            </div>
+            <div class="content">
+                <div class="title">Hochwertiger Edelstahl Auslauf</div>
+                <div class="description">
+                    Anschluss und Auslauf
+                    aus gebürstetem Edelstahl für
+                    Langlebigkeit und Hygiene
+                </div>
             </div>
         </div>
+        <img class="block colored-version-5" src="images/AVAIO-5-turqoise.jpg">
+        <img class="block colored-version-6" src="images/AVAIO-6-royalblue.jpg">
+        <img class="block colored-version-7" src="images/AVAIO-7-neon-gelb.jpg">
+        <img class="block colored-version-8" src="images/AVAIO-8-neon-pink.jpg">
     </div>
 
-    <script>
-        const tween = new TimelineLite();
-        const startElementPosition = "-300vw";
-
-        tween
-            .from(".hint.cartridge-hint", 1, { autoAlpha: 0 })
-            .to(".hint.cartridge-hint", 1, { autoAlpha: 0 }, "+=2")
-            .from(".filter", 6, { "margin-top": startElementPosition })
-            .from(".hint.silicone-hose-hint", 1, { autoAlpha: 0 })
-            .to(".hint.silicone-hose-hint", 1, { autoAlpha: 0 }, "+=2")
-            .from(".ball", 6, { "margin-top": startElementPosition })
-            .set(".ball", { attr: { src:"images/gold-ball-cutted.png" } }, "-=0.6")
-            .from(".hint.ball-hint", 1, { autoAlpha: 0 })
-            .to(".hint.ball-hint", 1, { autoAlpha: 0 }, "+=2")
-            .fromTo(".ball", 4, { "z-index": "0" }, { "z-index": "10" })
-            .from(".faucet", 6, { "margin-top": startElementPosition })
-            .set(".faucet", { attr: { src:"images/faucet-cutted.png" } }, "-=0.3")
-            .to(".ball", 0, { "z-index": "0" }, "+=0.3")
-            .from(".hint.spout-hint", 1, { autoAlpha: 0 })
-            .to(".hint.spout-hint", 1, { autoAlpha: 0 }, "+=2");
-
-        const controller = new ScrollMagic.Controller();
-
-        const scene = new ScrollMagic.Scene({
-            triggerElement: '#app',
-            triggerHook: 0,
-            duration: 20000,
-        })
-            .setTween(tween)
-            .setPin('#app')
-            .addTo(controller);
-    </script>
+    <script src="main.js?v=9"></script>
 </body>
 </html>
