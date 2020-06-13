@@ -238,7 +238,7 @@ body {
 
 @media only screen and (max-width: 1919px) {
   .cartridge-hint {
-    width: 530px;
+    width: 515px;
     margin-top: -8.5vw;
   }
 
@@ -254,15 +254,15 @@ body {
   }
 
   .hint {
-    font-size: 1.2vw;
+    font-size: 1.10vw;
   }
 
   .hint .title {
-    font-size: 1.75vw;
+    font-size: 1.575vw;
   }
 
   .cartridge-hint {
-    width: 35vw;
+    width: 31vw;
     margin-top: -10vw;
   }
 
@@ -285,25 +285,25 @@ body {
 
 @media only screen and (max-width: 1366px) {
   .hint {
-    font-size: 1.25vw;
+    font-size: 1.15vw;
   }
 
   .cartridge-hint {
-    width: 36vw;
+    width: 32vw;
   }
 }
 
 @media only screen and (max-width: 1199px) {
   .hint {
-    font-size: 1.35vw;
+    font-size: 1.25vw;
   }
 
   .hint .title {
-    font-size: 2.0vw;
+    font-size: 1.8vw;
   }
 
   .cartridge-hint {
-    width: 39vw;
+    width: 35vw;
   }
 }
 
