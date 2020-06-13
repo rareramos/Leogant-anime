@@ -321,24 +321,31 @@ body {
 
 @media (max-width: 768px) and (orientation: portrait) {
   #app .animation {
+    margin-top: -3vw;
     transform: scale(1.5);
   }
 
   #app h2 {
-    margin-left: -42vw;
-    margin-top: -56vw;
+    margin-left: -50vw;
+    margin-top: -89vw;
+    padding: 17px;
+    width: 485px;
   }
 
   .hint {
-    margin-top: 30vw;
-    margin-left: -29vw;
-    width: 78vw;
-    font-size: 2.5vw;
+    margin-top: 36vw;
+    margin-left: -46vw;
+    width: 98vw;
+    font-size: 16px;
+  }
+
+  .hint .description {
+    width: 95%;
   }
 
   .hint .title {
-    font-size: 3vw;
-    margin-bottom: 1.5vw;
+    font-size: 6.3vw;
+    margin-bottom: 3vw;
     letter-spacing: .0384px;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -347,32 +354,39 @@ body {
     white-space: pre-wrap;
   }
 
+  .cartridge-hint {
+    width: 385px;
+  }
+
   .cartridge-hint .circle {
-    left: 30.6vw;
-    top: -36vw;
+    left: 47.6vw;
+    top: -44vw;
   }
 
   .silicone-hose-hint .circle {
-    left: 15.3vw;
-    top: -13vw;
-  }
-
-  .ball-hint {
-    width: 74vw;
+    left: 24.3vw;
+    top: -15vw;
   }
 
   .ball-hint .circle {
-    left: 42vw;
-    top: -26vw;
-  }
-
-  .spout-hint {
-    width: 74vw;
+    left: 64.5vw;
+    top: -34.5vw;
   }
 
   .spout-hint .circle {
-    left: 42.1vw;
-    top: -37vw;
+    left: 65.1vw;
+    top: -52vw;
+  }
+
+  .circle {
+    width: 5.4vw;
+    height: 5.4vw;
+  }
+
+  .circle .ripple {
+    width: 30vw;
+    height: 30vw;
+    margin: -12.4vw 0 0 -12.4vw;
   }
 }
 
