@@ -49,6 +49,7 @@ body {
   margin-top: -1.15vw;
   z-index: 2;
   transform: rotate(1deg);
+  opacity: 0;
 }
 
 .filter {
@@ -56,6 +57,7 @@ body {
   margin-left: -5.6vw;
   margin-top: -27.1vw;
   z-index: 3;
+  opacity: 0;
 }
 
 .faucet {
@@ -64,6 +66,7 @@ body {
   margin-top: -28.2vw;
   z-index: 4;
   transform: rotate(1.8deg);
+  opacity: 0;
 }
 
 .circle, .circle .ripple {
@@ -165,8 +168,8 @@ body {
 }
 
 .cartridge-hint {
-  width: 55vw;
-  margin-top: -10vw;
+  width: 1000px;
+  margin-top: -6.5vw;
   margin-left: 9vw;
 }
 
@@ -199,11 +202,11 @@ body {
 .spout-hint {
   width: 500px;
   margin-top: -7vw;
-  margin-left: 19.4vw;
+  margin-left: 17.4vw;
 }
 
 .spout-hint .circle {
-  left: -9.1vw;
+  left: -7.1vw;
   top: 1vw;
 }
 
@@ -223,6 +226,17 @@ body {
   text-transform: none;
 }
 
+@media only screen and (max-width: 1919px) {
+  .cartridge-hint {
+    width: 530px;
+    margin-top: -8.5vw;
+  }
+
+  .cartridge-hint .circle {
+    top: 3.5vw;
+  }
+}
+
 
 @media only screen and (max-width: 1440px) {
   #app h2 {
@@ -237,6 +251,15 @@ body {
     font-size: 1.75vw;
   }
 
+  .cartridge-hint {
+    width: 36vw;
+    margin-top: -10vw;
+  }
+
+  .cartridge-hint .circle {
+    top: 5vw;
+  }
+
   .ball-hint {
     margin-top: 1vw;
   }
@@ -247,6 +270,20 @@ body {
 
   .spout-hint .circle {
     top: 1.3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hint {
+    font-size: 1.35vw;
+  }
+
+  .hint .title {
+    font-size: 2.0vw;
+  }
+
+  .cartridge-hint {
+    width: 39vw;
   }
 }
 
@@ -264,7 +301,6 @@ body {
 
 @media (max-width: 768px) and (orientation: portrait) {
   #app .animation {
-    margin-top: 100vw;
     transform: scale(1.5);
   }
 
