@@ -154,7 +154,7 @@ body {
   left: 50%;
   z-index: 15;
   color: #363636;
-  font-family: aktiv-grotesk;
+  font-family: "aktiv-grotesk", sans-serif;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.6em;
@@ -250,7 +250,7 @@ body {
 
 @media only screen and (max-width: 1440px) {
   #app h2 {
-    font-size: 4.2vw;
+    font-size: 3.6vw;
   }
 
   .hint {
