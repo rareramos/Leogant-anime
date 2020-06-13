@@ -22,6 +22,7 @@ body {
 }
 
 #app .animation {
+  height: 100%;
   transform: scale(0.8);
 }
 
@@ -142,17 +143,18 @@ body {
   color: #363636;
   font-family: aktiv-grotesk;
   font-weight: 300;
-  font-size: 0.9vw;
+  font-size: 18px;
   line-height: 1.6em;
   letter-spacing: 0.06em;
 }
 
 .hint .title {
   font-family: "Vesper-Bold", sans-serif;
-  font-size: 1.3vw;
+  color: black;
+  font-size: 25px;
   margin-bottom: 0.2vw;
   line-height: 1.1em;
-  letter-spacing: -.01em;
+  letter-spacing: .04em;
 }
 
 .cartridge-hint .description,
@@ -163,54 +165,54 @@ body {
 }
 
 .cartridge-hint {
-  width: 47vw;
+  width: 55vw;
   margin-top: -10vw;
-  margin-left: 12vw;
+  margin-left: 9vw;
 }
 
 .cartridge-hint .circle {
-  left: -10.25vw;
+  left: -8vw;
   top: 1.5vw;
 }
 
 .silicone-hose-hint {
-  width: 36vw;
-  margin-left: -36vw;
+  width: 500px;
+  margin-left: -33vw;
 }
 
 .silicone-hose-hint .circle {
   left: 21.7vw;
-  top: 17vw;
+  top: 13vw;
 }
 
 .ball-hint {
-  width: 28vw;
-  margin-top: 2vw;
-  margin-left: 22vw;
+  width: 480px;
+  margin-top: 1.5vw;
+  margin-left: 19.2vw;
 }
 
 .ball-hint .circle {
   left: -9vw;
-  top: 2vw;
+  top: 1.5vw;
 }
 
 .spout-hint {
-  width: 30vw;
-  margin-top: -8vw;
-  margin-left: 22.2vw;
+  width: 500px;
+  margin-top: -7vw;
+  margin-left: 19.4vw;
 }
 
 .spout-hint .circle {
   left: -9.1vw;
-  top: 0.7vw;
+  top: 1vw;
 }
 
 #app h2 {
-  margin-top: -28vw;
-  margin-left: -46vw;
+  margin-top: -24vw;
+  margin-left: -43vw;
   font-family: "Vesper-Bold";
   font-style: normal;
-  font-size: 4.6vw;
+  font-size: 70px;
   line-height: 1.1em;
   letter-spacing: 0;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -222,10 +224,41 @@ body {
 }
 
 
+@media only screen and (max-width: 1440px) {
+  #app h2 {
+    font-size: 4.6vw;
+  }
+
+  .hint {
+    font-size: 1.25vw;
+  }
+
+  .hint .title {
+    font-size: 1.75vw;
+  }
+
+  .ball-hint {
+    margin-top: 1vw;
+  }
+
+  .ball-hint .circle {
+    top: 2vw;
+  }
+
+  .spout-hint .circle {
+    top: 1.3vw;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   #app h2 {
     font-size: 36px;
     margin-left: -53vw;
+    letter-spacing: -.01em
+  }
+
+  .hint .title {
+    letter-spacing: .0384px;
   }
 }
 
