@@ -215,7 +215,7 @@ body {
   margin-left: -43vw;
   font-family: "Vesper-Bold";
   font-style: normal;
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1.1em;
   letter-spacing: 0;
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -240,7 +240,7 @@ body {
 
 @media only screen and (max-width: 1440px) {
   #app h2 {
-    font-size: 4.6vw;
+    font-size: 4.2vw;
   }
 
   .hint {
