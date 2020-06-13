@@ -330,8 +330,8 @@ body {
 
   #app h2 {
     margin-left: -50vw;
-    margin-top: -89vw;
-    padding: 17px;
+    margin-top: -81vw;
+    padding: 13.6px;
     width: 485px;
   }
 
@@ -349,6 +349,7 @@ body {
   .hint .title {
     font-size: 6.3vw;
     margin-bottom: 3vw;
+    padding: 0;
     letter-spacing: .0384px;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
