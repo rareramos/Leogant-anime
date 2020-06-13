@@ -21,8 +21,7 @@ body {
   height: 100%;
 }
 
-.image {
-  margin-top: 5vw;
+#app .animation {
   height: 100%;
   transform: scale(0.8);
 }
@@ -50,6 +49,7 @@ body {
   margin-top: -1.15vw;
   z-index: 2;
   transform: rotate(1deg);
+  opacity: 0;
 }
 
 .filter {
@@ -57,6 +57,7 @@ body {
   margin-left: -5.6vw;
   margin-top: -27.1vw;
   z-index: 3;
+  opacity: 0;
 }
 
 .faucet {
@@ -65,6 +66,7 @@ body {
   margin-top: -28.2vw;
   z-index: 4;
   transform: rotate(1.8deg);
+  opacity: 0;
 }
 
 .circle, .circle .ripple {
@@ -151,37 +153,44 @@ body {
 
 .hint .title {
   font-family: "Vesper-Bold", sans-serif;
+  color: black;
   font-size: 25px;
   margin-bottom: 0.2vw;
   line-height: 1.1em;
-  letter-spacing: -.01em;
+  letter-spacing: .04em;
+}
+
+.cartridge-hint .description,
+.silicone-hose-hint .description,
+.ball-hint .description,
+.spout-hint .description {
+  width: 80%;
 }
 
 .cartridge-hint {
-  width: 500px;
-  margin-top: -4vw;
-  margin-left: 12vw;
+  width: 1000px;
+  margin-top: -6.5vw;
+  margin-left: 9vw;
 }
 
 .cartridge-hint .circle {
-  left: -10.9vw;
-  top: 50px;
+  left: -8vw;
+  top: 1.5vw;
 }
 
 .silicone-hose-hint {
-  width: 475px;
-  margin-left: -37vw;
-  margin-top: 2vw;
+  width: 500px;
+  margin-left: -33vw;
 }
 
 .silicone-hose-hint .circle {
-  left: 25.7vw;
-  top: 17vw;
+  left: 21.7vw;
+  top: 13vw;
 }
 
 .ball-hint {
-  width: 450px;
-  margin-top: 6.5vw;
+  width: 480px;
+  margin-top: 1.5vw;
   margin-left: 19.2vw;
 }
 
@@ -191,19 +200,19 @@ body {
 }
 
 .spout-hint {
-  width: 370px;
-  margin-top: -3vw;
-  margin-left: 19.4vw;
+  width: 500px;
+  margin-top: -7vw;
+  margin-left: 17.4vw;
 }
 
 .spout-hint .circle {
-  left: -9.0vw;
-  top: 1.5vw;
+  left: -7.1vw;
+  top: 1vw;
 }
 
 #app h2 {
-  margin-top: -21vw;
-  margin-left: -48vw;
+  margin-top: -24vw;
+  margin-left: -43vw;
   font-family: "Vesper-Bold";
   font-style: normal;
   font-size: 70px;
@@ -217,45 +226,98 @@ body {
   text-transform: none;
 }
 
+@media only screen and (max-width: 1919px) {
+  .cartridge-hint {
+    width: 530px;
+    margin-top: -8.5vw;
+  }
 
-@media only screen and (max-width: 768px) {
+  .cartridge-hint .circle {
+    top: 3.5vw;
+  }
+}
+
+
+@media only screen and (max-width: 1440px) {
   #app h2 {
-    width: 500px;
-    font-size: 36px;
-    margin-left: -53vw;
+    font-size: 4.6vw;
   }
 
   .hint {
-    font-size: 16px;
+    font-size: 1.25vw;
   }
 
   .hint .title {
-    font-size: 24px;
+    font-size: 1.75vw;
+  }
+
+  .cartridge-hint {
+    width: 36vw;
+    margin-top: -10vw;
+  }
+
+  .cartridge-hint .circle {
+    top: 5vw;
+  }
+
+  .ball-hint {
+    margin-top: 1vw;
+  }
+
+  .ball-hint .circle {
+    top: 2vw;
+  }
+
+  .spout-hint .circle {
+    top: 1.3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hint {
+    font-size: 1.35vw;
+  }
+
+  .hint .title {
+    font-size: 2.0vw;
+  }
+
+  .cartridge-hint {
+    width: 39vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #app h2 {
+    font-size: 36px;
+    margin-left: -53vw;
+    letter-spacing: -.01em
+  }
+
+  .hint .title {
+    letter-spacing: .0384px;
   }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
-  #app {
-    margin-top: 5vw !important;
-  }
-
-  #app .image {
-    margin-top: -10vw;
+  #app .animation {
     transform: scale(1.5);
   }
 
   #app h2 {
     margin-left: -42vw;
-    margin-top: -84vw;
+    margin-top: -56vw;
   }
 
   .hint {
-    margin-top: 35vw;
-    margin-left: -45vw;
-    width: calc(100% - 30px);
+    margin-top: 30vw;
+    margin-left: -29vw;
+    width: 78vw;
+    font-size: 2.5vw;
   }
 
   .hint .title {
+    font-size: 3vw;
     margin-bottom: 1.5vw;
     letter-spacing: .0384px;
     -webkit-hyphens: auto;
@@ -263,10 +325,6 @@ body {
     -ms-hyphens: auto;
     hyphens: auto;
     white-space: pre-wrap;
-  }
-
-  .cartridge-hint {
-    margin-top: 28vw;
   }
 
   .cartridge-hint .circle {
@@ -279,42 +337,22 @@ body {
     top: -13vw;
   }
 
+  .ball-hint {
+    width: 74vw;
+  }
+
   .ball-hint .circle {
     left: 42vw;
     top: -26vw;
   }
 
+  .spout-hint {
+    width: 74vw;
+  }
+
   .spout-hint .circle {
     left: 42.1vw;
     top: -37vw;
-  }
-}
-
-@media (width: 768px) and (height: 1024px) and (orientation: portrait) {
-  #app h2 {
-    margin-left: -28vw;
-    margin-top: -42vw;
-    transform: none;
-  }
-
-  .hint {
-    margin-top: 24vw;
-  }
-
-  .cartridge-hint .circle {
-    top: -30vw;
-  }
-
-  .silicone-hose-hint .circle {
-    top: -7vw;
-  }
-
-  .ball-hint .circle {
-    top: -20vw;
-  }
-
-  .spout-hint .circle {
-    top: -31vw;
   }
 }
 
@@ -328,22 +366,6 @@ body {
   }
   80%, 100% {
     opacity: 0;
-  }
-}
-
-@media (max-width: 320px) and (orientation: portrait) {
-  #app {
-    margin-top: auto !important;
-  }
-
-  #app h2 {
-    margin-left: -49vw;
-  }
-
-  .hint {
-    margin-top: 30vw;
-    margin-left: -49vw;
-    width: 100%;
   }
 }
 
