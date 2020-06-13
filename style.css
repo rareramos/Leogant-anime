@@ -9,6 +9,16 @@
   src: url(fonts/AktivGroteskCorp-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'aktiv-grotesk';
+  src: local('Aktiv Grotesk Light'), local('Aktiv-Grotesk-Light'),
+  url('fonts/AktivGroteskCorp-Light.woff2') format('woff2'),
+  url('fonts/AktivGroteskCorp-Light.woff') format('woff'),
+  url('fonts/AktivGroteskCorp-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -244,7 +254,7 @@ body {
   }
 
   .hint {
-    font-size: 1.25vw;
+    font-size: 1.2vw;
   }
 
   .hint .title {
@@ -252,7 +262,7 @@ body {
   }
 
   .cartridge-hint {
-    width: 36vw;
+    width: 35vw;
     margin-top: -10vw;
   }
 
@@ -273,7 +283,17 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1366px) {
+  .hint {
+    font-size: 1.25vw;
+  }
+
+  .cartridge-hint {
+    width: 36vw;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
   .hint {
     font-size: 1.35vw;
   }
