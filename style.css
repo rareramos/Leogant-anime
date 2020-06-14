@@ -354,7 +354,7 @@ body {
     margin-top: 36vw;
     margin-left: -46vw;
     width: 98vw;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .hint .description {
@@ -362,7 +362,7 @@ body {
   }
 
   .hint .title {
-    font-size: 6.3vw;
+    font-size: 6.05vw;
     margin-bottom: 3vw;
     padding: 0;
     letter-spacing: .0384px;
@@ -374,7 +374,7 @@ body {
   }
 
   .cartridge-hint {
-    width: 385px;
+    width: 360px;
   }
 
   .cartridge-hint .circle {
