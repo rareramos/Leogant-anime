@@ -323,7 +323,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   #app h2 {
-    font-size: 36px;
+    font-size: 32.4px;
     margin-left: -53vw;
     letter-spacing: -.01em
   }
@@ -406,6 +406,13 @@ body {
     width: 30vw;
     height: 30vw;
     margin: -12.4vw 0 0 -12.4vw;
+  }
+}
+
+
+@media only screen and (width: 375px) and (height: 812px) {
+  #app h2 {
+    margin-top: -89.1vw;
   }
 }
 
