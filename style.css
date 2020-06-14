@@ -163,6 +163,7 @@ body {
 }
 
 .hint .title {
+  margin: 0;
   padding-bottom: 20px;
   font-family: "Vesper-Bold", sans-serif;
   color: black;
@@ -170,6 +171,15 @@ body {
   margin-bottom: 0.2vw;
   line-height: 1.1em;
   letter-spacing: .04em;
+}
+
+#app h2,
+.hint .title,
+.hint .description {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 
 .cartridge-hint .description,
@@ -324,6 +334,10 @@ body {
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
+  #app {
+    overflow-x: visible !important;
+  }
+
   #app .animation {
     margin-top: -3vw;
     transform: scale(1.5);
@@ -352,10 +366,10 @@ body {
     margin-bottom: 3vw;
     padding: 0;
     letter-spacing: .0384px;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
     white-space: pre-wrap;
   }
 
