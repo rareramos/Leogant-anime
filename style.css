@@ -414,6 +414,10 @@ body {
   #app h2 {
     margin-top: -89.1vw;
   }
+
+  .hint {
+    margin-top: 45vw;
+  }
 }
 
 @keyframes pulse-ring {
