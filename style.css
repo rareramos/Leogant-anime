@@ -412,11 +412,27 @@ body {
 
 @media only screen and (width: 375px) and (height: 812px) {
   #app h2 {
-    margin-top: -89.1vw;
+    margin-top: -97.1vw;
   }
 
   .hint {
     margin-top: 45vw;
+  }
+
+  .cartridge-hint .circle {
+    top: -57vw;
+  }
+
+  .silicone-hose-hint .circle {
+    top: -24vw;
+  }
+
+  .ball-hint .circle {
+    top: -42.5vw;
+  }
+
+  .spout-hint .circle {
+    top: -61vw;
   }
 }
 
