@@ -410,7 +410,7 @@ body {
 }
 
 
-@media only screen and (width: 375px) and (min-height: 736px) {
+@media only screen and (width: 375px) and (min-height: 668px) {
   #app h2 {
     margin-top: -97.1vw;
   }
