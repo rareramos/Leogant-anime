@@ -333,7 +333,7 @@ body {
   }
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait) {
   #app {
     overflow-x: visible !important;
   }
@@ -410,7 +410,7 @@ body {
 }
 
 
-@media only screen and (width: 375px) and (height: 812px) {
+@media only screen and (width: 375px) and (min-height: 736px) {
   #app h2 {
     margin-top: -97.1vw;
   }
