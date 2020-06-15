@@ -29,7 +29,7 @@ body {
 
 #app {
   height: 100%;
-  overflow-x: hidden !important;
+  overflow: hidden !important;
 }
 
 #app .animation {
@@ -333,28 +333,24 @@ body {
   }
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
-  #app {
-    overflow-x: visible !important;
-  }
-
+@media (max-width: 768px) and (orientation: portrait) {
   #app .animation {
     margin-top: -3vw;
     transform: scale(1.5);
   }
 
   #app h2 {
-    margin-left: -50vw;
-    margin-top: -81vw;
+    margin-left: -48vw;
+    margin-top: -65vw;
     padding: 13.6px;
-    width: 485px;
+    font-size: 7vw;
   }
 
   .hint {
-    margin-top: 36vw;
+    margin-top: 34vw;
     margin-left: -46vw;
-    width: 98vw;
-    font-size: 15px;
+    width: 78vw;
+    font-size: 3.24vw;
   }
 
   .hint .description {
@@ -362,39 +358,31 @@ body {
   }
 
   .hint .title {
-    font-size: 6.05vw;
-    margin-bottom: 3vw;
+    font-size: 4.45vw;
+    margin-bottom: 2vw;
     padding: 0;
     letter-spacing: .0384px;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
     white-space: pre-wrap;
-  }
-
-  .cartridge-hint {
-    width: 360px;
   }
 
   .cartridge-hint .circle {
     left: 47.6vw;
-    top: -48vw;
+    top: -46vw;
   }
 
   .silicone-hose-hint .circle {
     left: 24.3vw;
-    top: -15vw;
+    top: -13vw;
   }
 
   .ball-hint .circle {
     left: 64.5vw;
-    top: -33.5vw;
+    top: -31.5vw;
   }
 
   .spout-hint .circle {
     left: 65.1vw;
-    top: -52vw;
+    top: -50vw;
   }
 
   .circle {
@@ -410,7 +398,52 @@ body {
 }
 
 
-@media only screen and (width: 375px) and (min-height: 668px) {
+@media (max-width: 414px) and (orientation: portrait) {
+  /*#app {*/
+    /*overflow-x: visible !important;*/
+  /*}*/
+
+  #app h2 {
+    margin-left: -50vw;
+    margin-top: -81vw;
+    font-size: 32.4px;
+    width: 485px;
+  }
+
+  .hint {
+    width: 98vw;
+    margin-top: 36vw;
+    font-size: 15px;
+  }
+
+  .hint .title {
+    margin-bottom: 3vw;
+    font-size: 6.05vw;
+  }
+
+  .cartridge-hint {
+    width: 360px;
+  }
+
+  .cartridge-hint .circle {
+    top: -48vw;
+  }
+
+  .silicone-hose-hint .circle {
+    top: -15vw;
+  }
+
+  .ball-hint .circle {
+    top: -33.5vw;
+  }
+
+  .spout-hint .circle {
+    top: -52vw;
+  }
+}
+
+
+@media only screen and (width: 375px) and (min-height: 736px) {
   #app h2 {
     margin-top: -97.1vw;
   }
